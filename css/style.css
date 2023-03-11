@@ -1,0 +1,100 @@
+:root {
+  --Dark-cyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  --Very-dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+body {
+  background-color: var(--Cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: var(--White);
+  border-radius: 12px;
+  margin: 10px;
+}
+.container .image {
+  height: 420px;
+}
+.container .image img {
+  height: inherit;
+}
+@media (max-width: 768px) {
+  .container .image img {
+    width: 100vw;
+  }
+}
+.container .text {
+  margin: 25px;
+  font-size: 14px;
+  width: 210px;
+}
+@media (max-width: 768px) {
+  .container .text {
+    width: 80%;
+    font-size: 15px;
+  }
+}
+.container .text > span {
+  color: var(--Dark-grayish-blue);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 0.9em;
+}
+.container .text h1 {
+  font-family: 'Fraunces', serif;
+  text-transform: capitalize;
+  font-size: 2.2em;
+}
+.container .text p {
+  color: var(--Dark-grayish-blue);
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 20px;
+  font-size: 0.9em;
+  line-height: 1.6;
+}
+.container .text .price {
+  margin-bottom: 20px;
+}
+.container .text .price span:first-child {
+  color: var(--Dark-cyan);
+  font-size: 2em;
+  margin-right: 10px;
+  font-family: 'Fraunces', serif;
+}
+.container .text .price span:last-child {
+  color: var(--Dark-grayish-blue);
+  font-family: 'Montserrat', sans-serif;
+  display: inline-block;
+}
+.container .text .sumbit {
+  text-align: center;
+  background: var(--Dark-cyan);
+  color: var(--White);
+  padding: 12px 0;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+}
+.container .text .sumbit:hover {
+  background: hsl(157, 36%, 17%);
+}
+.container .text .sumbit span {
+  font-family: 'Montserrat', sans-serif;
+  margin-left: 5px;
+}
